@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql-headless
+  namespace: expense
+  labels:
+    project: expense
+    tier: mysql
+spec:
+  clusterIP: None
+  selector:
+    project: expense
+    tier: mysql
+  ports:
+  - protocol: TCP
+    port: 3306
+    targetPort: 3306
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: expense
+  labels:
+    project: expense
+    tier: mysql
+spec:
+  selector:
+    project: expense
+    tier: mysql
+  ports:
+  - protocol: TCP
+    port: 3306
+    targetPort: 3306
