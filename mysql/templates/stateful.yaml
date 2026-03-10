@@ -7,11 +7,13 @@ metadata:
   labels:
     project: expense
     tier: mysql
+    folder: helm
 spec:
   selector:
     matchLabels:
       project: expense
       tier: mysql
+      folder: helm
   serviceName: "mysql-headless"
   replicas: {{ .values.statefulset.replicas }}# by default is 1
   
@@ -20,7 +22,8 @@ spec:
       labels:
      
         project: expense
-        tier: mysql # has to match .spec.selector.matchLabels
+        tier: mysql
+        folder: helm # has to match .spec.selector.matchLabels
     spec:
     
       containers:

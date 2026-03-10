@@ -6,6 +6,7 @@ metadata:
   labels:
     project: expense
     tier: mysql
+    folder: helm
 spec:
   clusterIP: None
   selector:
@@ -26,6 +27,7 @@ metadata:
   labels:
     project: expense
     tier: mysql
+    folder: helm
 spec:
   selector:
     project: expense
