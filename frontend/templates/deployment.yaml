@@ -20,4 +20,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: kavya478/frontend:{{ .Values.deployment.version}}
+        image: {{ .Values.deployment.version}}
