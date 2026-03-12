@@ -1,3 +1,4 @@
 statefulset:
   version: kavya478/frontend:2.0
+  replicas: 2
   
