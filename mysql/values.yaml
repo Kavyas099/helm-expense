@@ -1,4 +1,4 @@
 statefulset:
-  version: kavya478/mysql:1.0.0
+  version: kavya478/mysql:2.0
   storage: 1Gi
-  replicas: 2
+  replicas: 1

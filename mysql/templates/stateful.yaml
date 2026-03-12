@@ -15,7 +15,7 @@ spec:
       tier: mysql
       folder: helm
   serviceName: "mysql-headless"
-  replicas: {{ .Values.statefulset.replicas }}# by default is 1
+  replicas: {{ .Values.statefulset.replicas }}
   
   template:
     metadata:
