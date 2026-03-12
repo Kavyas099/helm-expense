@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: backend
+  namespace: expense
+  labels:
+    project: expense
+    tier: backend
+spec:
+  selector:
+    project: expense
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+    
+
