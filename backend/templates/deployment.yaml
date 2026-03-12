@@ -17,9 +17,10 @@ spec:
       labels:
         project: expense
         tier: backend
-    containers:
-    - name: nginx
-      image: {{ .Values.deployment.version}}
-      envFrom:
-        - configMapRef:
-            name: backend
+    spec:
+      containers:
+      - name: nginx
+        image: {{ .Values.deployment.version}}
+        envFrom:
+          - configMapRef:
+              name: backend
